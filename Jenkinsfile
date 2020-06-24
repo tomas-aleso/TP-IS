@@ -10,5 +10,11 @@ pipeline {
       }
     }
 
+    stage('Analyze') {
+      steps {
+        bat 'gradle sonarqube'
+      }
+    }
+
   }
 }
