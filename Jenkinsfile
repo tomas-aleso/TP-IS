@@ -13,6 +13,7 @@ pipeline {
     stage('Analyze') {
       steps {
         bat 'gradle sonarqube'
+        bat 'gradle -i test jacocoTestReport'
       }
     }
 
